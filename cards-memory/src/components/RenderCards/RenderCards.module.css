@@ -1,0 +1,45 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons button {
+    margin: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+}
+
+.card {
+    margin: 10px;
+    
+    width: 160px;
+    height: 210px;
+    
+    cursor: pointer;
+    border-radius: 15px;
+    transition: all .2s ease-in-out;
+}
+
+.card_default {
+    background:linear-gradient(80deg, 
+            rgba(81, 204, 226, 0.701961) 0%, 
+            rgba(51, 105, 231, 0.901961) 100%);
+}
+
+.card:hover, .card:active {
+    box-shadow: 0px 11px 17px 1px rgba(255, 255, 255, 0.75);
+}

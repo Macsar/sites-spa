@@ -1,0 +1,17 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: rgb(27, 31, 35);
+    
+    min-height: 100vh;
+}
+
+.app h1 {
+    font-size: 40px;
+    text-align: center;
+    color: rgb(180, 185, 191);
+    margin-bottom: 30px;
+}

@@ -1,0 +1,27 @@
+.btn {
+    font-size: 24px;
+    border: 2px solid transparent;
+    outline: none;
+    cursor: pointer;
+    border-radius: 7px;
+    background: #2196f3;
+    font-weight: bold;
+    color: white;
+    
+    width: 200px;
+    height: 55px;
+
+    transition: all .3s ease-in-out;
+}
+
+.btn:hover {
+    background: transparent;
+    border-color: #2196f3;
+}
+
+.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    background: grey;
+    color: rgba(255, 255, 255, 0.808);
+}

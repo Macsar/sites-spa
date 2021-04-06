@@ -1,0 +1,21 @@
+.select button:first-child {
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 440px) {
+    .select {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .select button:first-child {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .select button {
+        width: calc(100vw - 25px);
+    }
+}
