@@ -1,0 +1,154 @@
+.Wrap {
+    /* position: absolute; */
+    position: relative;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* height: calc(100vh - 40px); */
+    /* top: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px; */
+    /* top: 50%; */
+}
+
+.Game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.Buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.Buttons button:first-child {
+    margin-bottom: 30px;
+}
+
+.Squares {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    max-width: 660px;
+
+    margin-right: 40px;
+}
+
+.Square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: white;
+    font-size: 50px;
+    font-family: sans-serif;
+
+    border: 1px solid blue;
+    padding: 30px;
+    
+    width: 220px;
+    height: 220px;
+}
+
+.Square:first-child {
+    border-top: none;
+    border-left: none;
+}
+
+.Square:nth-child(2) { border-top: none }
+
+.Square:nth-child(3) { 
+    border-top: none;
+    border-right: none;
+}
+
+.Square:nth-child(4) { border-left: none }
+
+.Square:nth-child(6) { border-right: none }
+
+.Square:nth-child(7) { 
+    border-left: none;
+    border-bottom: none;
+}
+
+.Square:nth-child(8) { border-bottom: none }
+
+.Square:nth-child(9) { 
+    border-bottom: none;
+    border-right: none;
+}
+
+@media all and (max-width: 930px) {
+    .Game {
+        flex-direction: column;
+    }
+
+    .Squares { margin: 0 }
+
+    .Buttons {
+        margin-top: 40px;
+        flex-direction: row;
+    }
+
+    .Buttons button:first-child {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+}
+
+@media all and (max-width: 700px) {
+    .Squares { max-width: 460px }
+    
+    .Square {
+        font-size: 46px;
+        padding: 20px;
+        
+        width: 140px;
+        height: 140px;
+    }
+
+    .Buttons button { padding: 20px 10px }
+}
+
+@media all and (max-width: 450px) {
+    .Squares { max-width: 400px }
+    
+    .Square {
+        font-size: 46px;
+        padding: 20px;
+        
+        width: 120px;
+        height: 120px;
+    }
+
+    .Buttons button { padding: 20px 10px }
+    
+    .Buttons button:first-child {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .Buttons {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 380px) {
+    .Squares { max-width: 300px }
+    
+    .Square {
+        font-size: 32px;
+        padding: 20px;
+        
+        width: 100px;
+        height: 100px;
+    }
+}

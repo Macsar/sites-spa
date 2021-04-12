@@ -1,0 +1,101 @@
+.Victory {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    max-width: 500px;
+}
+
+.Title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 40px;
+    font-family: sans-serif;
+    color: white;
+    
+    width: 500px;
+    height: 200px;
+    
+    background: #2a3eb1;
+    border-radius: 20px;
+    transition: all .3s ease-in-out;
+}
+
+.Title:hover {
+    box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+.Button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    width: 100%;
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 530px) {
+    .Victory {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .Title {
+        font-size: 40px;
+        width: 400px;
+        height: 200px;
+    }
+    
+    .Button {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .Button button {
+        width: 100%;
+    }
+
+    .Button button:first-child {
+        margin-bottom: 20px;
+        padding: 20px 10px;
+    }
+
+    .Button button:last-child {
+        padding: 20px 10px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .Victory {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .Title {
+        font-size: 30px;
+        width: 300px;
+        height: 160px;
+    }
+
+    .Button {
+        flex-direction: column;
+
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .Button button:first-child {
+        font-size: 24px;
+    }
+}
