@@ -12,7 +12,13 @@ import classnames from 'classnames';
 import { connect } from 'react-redux';
 import { addObjects } from '../../store/actions/cards';
 
-const RenderCards = ({ colors, cards, addObjects, stateGames, setStateGames }) => {  
+const RenderCards = ({ 
+	colors, 	// цвета
+	cards, 		// карточки
+	addObjects, // функция добавления карточек в стейт
+	// состояние игры
+	stateGames, setStateGames 
+}) => {  
     const [tmpClick, setTmpClick] = useState(null);
     const [indexCard, setIndexCard] = useState(null);
     const [indexNextCard, setIndexNextCard] = useState(null);

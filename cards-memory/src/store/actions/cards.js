@@ -1,11 +1,17 @@
 import { 
-    FETCH_CARDS, FETCH_COLORS8, FETCH_COLORS16, 
+    FETCH_CARDS, FETCH_COLORS4, FETCH_COLORS8, FETCH_COLORS16, 
     GEN_ARRAY, ADD_OBJECTS
 } from './actionTypes';
 
 export function fetchCards() {
     return {
         type: FETCH_CARDS
+    };
+};
+
+export function fetchColors4() {
+    return {
+        type: FETCH_COLORS4
     };
 };
 
