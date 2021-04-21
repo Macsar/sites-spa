@@ -1,4 +1,7 @@
+// Импорты функции
 import styles from './Button.module.css';
+
+// Остальные импорты
 import classnames from 'classnames';
 
 const Button = ({ disabled, click, children }) => {

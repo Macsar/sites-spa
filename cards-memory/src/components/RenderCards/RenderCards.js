@@ -1,9 +1,16 @@
+// Импорты функции
 import { useState, useEffect } from 'react';
 import styles from './RenderCards.module.css';
+
+// Импорт компонентов
+import Button from '../Button/Button';
+
+// Остальные импорты
+import classnames from 'classnames';
+
+// Импорты redux'а
 import { connect } from 'react-redux';
 import { addObjects } from '../../store/actions/cards';
-import classnames from 'classnames';
-import Button from '../Button/Button';
 
 const RenderCards = ({ colors, cards, addObjects, stateGames, setStateGames }) => {  
     const [tmpClick, setTmpClick] = useState(null);

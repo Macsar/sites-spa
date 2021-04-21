@@ -1,6 +1,11 @@
+// Импорты функции
 import styles from './Game.module.css';
 import Select from '../Select/Select';
+
+// Импорт компонентов
 import RenderCards from '../RenderCards/RenderCards';
+
+// Импорты redux'а
 import { connect } from 'react-redux';
 
 const Game = ({ cards, setStateGames, stateGames }) => {

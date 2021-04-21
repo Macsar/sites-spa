@@ -1,5 +1,10 @@
+// Импорты функции
 import styles from './Select.module.css';
+
+// Импорт компонентов
 import Button from '../Button/Button';
+
+// Импорты redux'а
 import { connect } from 'react-redux';
 import { genArray } from '../../store/actions/cards';
 

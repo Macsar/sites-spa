@@ -1,5 +1,8 @@
+// Импорты функции
 import { useState } from 'react';
 import styles from './App.module.css';
+
+// Импорт компонентов
 import Button from './components/Button/Button';
 import Game from './components/Game/Game';
 
