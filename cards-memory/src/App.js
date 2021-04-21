@@ -7,7 +7,7 @@ const App = () => {
 	const [stateGames, setStateGames] = useState(false);
 
 	return (
-		<div className = {styles.app}>
+		<div className = {styles.wrap}>
 			{
 				!stateGames
 				
