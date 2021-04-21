@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './RenderCards.module.css';
 import { connect } from 'react-redux';
 import { addObjects } from '../../store/actions/cards';

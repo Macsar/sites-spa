@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Game.module.css';
 import Select from '../Select/Select';
 import RenderCards from '../RenderCards/RenderCards';

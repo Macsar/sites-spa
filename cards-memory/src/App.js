@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from './App.module.css';
 import Button from './components/Button/Button';
 import Game from './components/Game/Game';
