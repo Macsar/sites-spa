@@ -2,12 +2,12 @@ import React from 'react';
 import styles from './Button.module.css';
 import classnames from 'classnames';
 
-const Button = props => {
+const Button = ({ disabled, click, children }) => {
     return <button 
-        className = {classnames(styles.btn, props.disabled ? styles.disabled : '')}
-        onClick = {props.click}
-        disabled = {props.disabled}
-    >{ props.children }</button>
+        className = {classnames(styles.btn, disabled ? styles.disabled : '')}
+        onClick = {click}
+        disabled = {disabled}
+    >{ children }</button>
 };
 
 export default Button;
