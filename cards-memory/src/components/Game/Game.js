@@ -8,21 +8,20 @@ import RenderCards from '../RenderCards/RenderCards';
 // Импорты redux'а
 import { connect } from 'react-redux';
 
-const Game = ({ cards, setStateGames, stateGames }) => {
-    return (
-        <div className = {styles.wrap}>
-            {
-                !cards.length
-                
-                ?   <Select />
-                
-                :   cards.length 
-                    ? <RenderCards setStateGames = {setStateGames} stateGames = {stateGames} /> 
-                    : null
-            }
-        </div>
-    )
-};
+const Game = ({ cards, setStateGames, stateGames }) => <div 
+	className = {styles.wrap}
+>
+	{
+		!cards.length
+		
+		? 	<Select />
+		
+		: 	<RenderCards 
+				setStateGames = {setStateGames} 
+				stateGames = {stateGames} 
+			/>
+	}
+</div>
 
 function mapStateToProps(state) {
 	return {
