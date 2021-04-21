@@ -7,6 +7,7 @@ import Button from './components/Button/Button';
 import Game from './components/Game/Game';
 
 const App = () => {
+	// Состояние игры, запущена или нет
 	const [stateGames, setStateGames] = useState(false);
 
 	return (
@@ -16,10 +17,15 @@ const App = () => {
 				
 				? 	<>
 						<h1>Запомнить Карточки</h1>
-						<Button click = {() => setStateGames(!stateGames)}>Начать</Button>
+						<Button
+							click = {() => setStateGames(!stateGames)}
+						>Начать</Button>
 					</>
 				
-				: 	<Game setStateGames = {setStateGames} stateGames = {stateGames} />
+				: 	<Game 
+						setStateGames = {setStateGames} 
+						stateGames = {stateGames} 
+					/>
 			}
 		</div>
 	);

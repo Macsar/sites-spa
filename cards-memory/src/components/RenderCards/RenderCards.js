@@ -18,18 +18,18 @@ const RenderCards = ({ colors, cards, addObjects, stateGames, setStateGames }) =
     const [indexNextCard, setIndexNextCard] = useState(null);
     
     useEffect(() => {
-        let tmp = null, count = 0;
+        let count = 0;
         let cardsTmp = [];
 
+		// генерация массива объектов
         for (let i = 0; i < cards.length; i++) {
-            tmp = Math.floor(Math.random() * 100);
-            
             cardsTmp.push(
-                {id: tmp, color: colors[count]}, 
-                {id: tmp, color: colors[count]}
+                { id: count, color: colors[count] }, 
+                { id: count, color: colors[count] }
             );
             
             count++;
+			// добавляем i, поскольку общее количество карточек / 2
             i++;
         };
 
@@ -41,6 +41,7 @@ const RenderCards = ({ colors, cards, addObjects, stateGames, setStateGames }) =
             cardsTmp[j] = temp;
         }
 
+		// добавляем карточки в общий массив
         addObjects(cardsTmp);
     }, [cards.length, colors, addObjects]);
 
@@ -80,8 +81,8 @@ const RenderCards = ({ colors, cards, addObjects, stateGames, setStateGames }) =
         <div className = {styles.wrap}>
             <div className = {styles.cards}>
                 {
-                    cards[cards.length - 1] !== null
-                    ?   cards.map((item, index) => {
+                    cards[cards.length - 1] !== null &&
+						cards.map((item, index) => {
                             return <div
                                 key = {index}
                                 className = { classnames(styles.card, styles.card_default) }
@@ -92,23 +93,19 @@ const RenderCards = ({ colors, cards, addObjects, stateGames, setStateGames }) =
                                 }}
                                 onClick = {() => memoryCards(item.id, index)}
                             />
-                        })
-                        
-                    :   null
+						})
                 }
             </div>
         
             <div className = {styles.buttons}>
-                <Button click = {
-                    () => addObjects([])
+                <Button click = {() => 
+					addObjects([])
                 }>Рестарт</Button>
                 
-                <Button click = {
-                    () => [
-                        setStateGames(!stateGames),
-                        addObjects([])
-                    ]
-                }>Выход</Button>
+                <Button click = {() => [
+					setStateGames(!stateGames),
+					addObjects([])
+                ]}>Выход</Button>
             </div>
         </div>
     )
